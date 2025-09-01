@@ -35,10 +35,11 @@
 
 # Backend services
 
-{$DOMAIN_NAME}:80 {
+:80 {
 
-        # api
-	# reverse_proxy /api/* api:80 
+        # todo: set api proxy once added to sdl
+        #redir /api /api/
+        #reverse_proxy /api/* api:80
 
 	# docs
         redir /docs /docs/
@@ -48,10 +49,11 @@
         reverse_proxy frontend:80
 }
 
-{$DOMAIN_NAME}:443 {
+:443 {
 
-        # api
-	# reverse_proxy /api/* api:80 
+        # todo: set api proxy once added to sdl
+        #redir /api /api/
+        #reverse_proxy /api/* api:80
 
 	# docs
         redir /docs /docs/

@@ -56,14 +56,13 @@ services:
           - service: caddy
   # Reverse Proxy
   caddy:
-    image: programmerke/akash-vpn-caddy:0.0.6
+    image: programmerke/akash-vpn-caddy:0.0.10
     env:
-      - DOMAIN_NAME=vpn.akash.99nth.co.ke
+      - DOMAIN_NAME=akashvpn.decentralized.win
     expose:
       - port: 80
-        to:
-          - global: true
-      - port: 443
+        accept:
+          - akashvpn.decentralized.win
         to:
           - global: true
 
