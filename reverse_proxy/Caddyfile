@@ -35,21 +35,8 @@
 
 # Backend services
 
-:80 {
 
-        # todo: set api proxy once added to sdl
-        #redir /api /api/
-        #reverse_proxy /api/* api:80
-
-	# docs
-        redir /docs /docs/
-	reverse_proxy /docs/* docs:80
-
-	# landing page
-        reverse_proxy frontend:80
-}
-
-:443 {
+{$DOMAIN_NAME} {
 
         # todo: set api proxy once added to sdl
         #redir /api /api/
